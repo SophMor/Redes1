@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de IP</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <div class="container">
+        <h1 id="valorIp">Ingrese la IP que quiere calcular</h1>
+        <input type="text" class="container__input" id="valorIpRed" aria-label="Ingrese la IP"/>
+        
+        <h2 id="numeroMascara">Ingrese el número de máscara</h2>
+        <input class="container__input" type="number" id="valorNoCeros" min="1" max="32" aria-label="Ingrese el número de máscara"/>
+        
+        <h2 id="ipCalcular">Ingrese el número deseado</h2>
+        <input type="number" class="container__input"  id="valorIpDeseado" aria-label="Ingrese el número deseado"/>
+        <button onclick="calcularIp()" class="container__boton">Calcular</button>
+
+    </div>
+    
+  
+    
+    <div class="container2">
+        <h2>Su número de host es</h2>
+        <h2 id="result_host"></h2>
+
+        <h3>IP Binaria</h3>
+        <h3 id="IpBinaria"></h3>
+
+        <h3>IP Máscara</h3>
+        <h3 id="ipMascaraText"></h3>
+        <h3 id="ipMascaraDecimalText"></h3>
+
+        <h3>IP de Red</h3>
+        <h3 id="ipRed"></h3>
+        <h3 id="ipDecimalRed"></h3>
+
+        <h3>IP Broadcast</h3>
+        <h3 id="ipBroadcast"></h3>
+        <h3 id="ipBroadcastDecimal"></h3>
+
+        <h3>Clase</h3>
+        <h3 id="tipoClaseIp"></h3>
+        
+        <h3>Deseado</h3>
+        <h3 id="valorIpSumaTexto"></h3>
+    </div>
+
+    <script src="calculadora.js"></script>
+</body>
+</html>

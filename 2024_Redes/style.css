@@ -1,0 +1,111 @@
+/* Estilos generales */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    color: white; /* Color de texto predeterminado */
+}
+
+/* Estilo del cuerpo */
+body {
+    background: linear-gradient(#982B1C 0%, #982B1C 33.33%, #982B1C 66.67%, #01080E 100%);
+    height: 100vh;
+    margin: 0; /* Asegúrate de que el margen del cuerpo sea 0 */
+    display: flex;
+    align-items: center; /* Centra verticalmente los contenedores */
+    justify-content: space-between; /* Espacio entre los contenedores */
+    position: relative; /* Necesario para los contenedores absolutamente posicionados */
+}
+
+/* Contenedor principal */
+.container {
+    width: 370px;
+    height: 470px;
+    display: flex;
+    flex-direction: column; /* Alinea los elementos internos verticalmente */
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 24px;
+    border: 1px solid #F2E8C6;
+    box-shadow: 4px 4px 20px 0px rgba(1, 8, 14, 0.15);
+    background-size: cover; /* Ajusta el tamaño del fondo */
+    position: absolute;
+    left: 20px; /* Espacio desde el borde izquierdo */
+}
+
+/* Contenedor secundario */
+.container2 {
+    width: 370px;
+    height: 470px;
+    display: flex;
+    flex-direction: column; /* Alinea los elementos internos verticalmente */
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 24px;
+    border: 1px solid #eecfce;
+    box-shadow: 4px 4px 20px 0px rgba(1, 8, 14, 0.15);
+    background-size: cover; /* Ajusta el tamaño del fondo */
+    position: absolute;
+    right: 20px; /* Espacio desde el borde izquierdo */
+}
+
+/* Estilos de los botones dentro de los contenedores */
+.container__boton {
+    border-radius: 16px;
+    background: #982B1C;
+    color: #01080E;
+    padding: 16px 24px;
+    width: 100%;
+    font-size: 24px;
+    font-weight: 700;
+    border: none;
+    margin-top: 2rem;
+    display: flex;
+    transition: all 0.5s;
+    position: relative;
+}
+.container__boton:hover {
+    background-color: #800000; /* Green */
+    color: #01080E;
+  }
+
+
+/* Estilos del texto dentro de los contenedores */
+.container__texto {
+    margin: 16px 0;
+}
+
+.container__texto-azul {
+    color: #F2E8C6; /* Color de texto específico */
+}
+
+/* Estilos del input dentro de los contenedores */
+.container__input {
+    width: 100%;
+    height: 72px;
+    border-radius: 16px;
+    background-color: #FFF;
+    border: none;
+    color: #01080E;
+    padding: 2rem;
+    font-size: 16px;
+    font-weight: 700;
+    font-family: 'Inter', sans-serif;
+}
+
+/* Estilo de los encabezados */
+h1 {
+    font-family: 'Chakra Petch', sans-serif;
+    font-size: 52px;
+    padding-bottom: 3rem;
+}
+
+h2, h3, button {
+    font-family: 'Inter', sans-serif;
+}
+
+/* Estilo del párrafo */
+.texto__parrafo {
+    font-size: 32px;
+    font-weight: 400;
+}

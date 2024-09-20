@@ -5,23 +5,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculadora de IP</title>
     <link rel="stylesheet" href="style.css">
-
 </head>
 <body>
     <div class="container">
         <h1 id="valorIp">Ingrese la IP que quiere calcular</h1>
-        <input type="text" class="container__input" id="valorIpRed" aria-label="Ingrese la IP"/>
-        
-        <h2 id="numeroMascara">Ingrese el número de máscara</h2>
-        <input class="container__input" type="number" id="valorNoCeros" min="1" max="32" aria-label="Ingrese el número de máscara"/>
-        
-        <h2 id="ipCalcular">Ingrese el número deseado</h2>
-        <input type="number" class="container__input"  id="valorIpDeseado" aria-label="Ingrese el número deseado"/>
-        <button onclick="calcularIp()" class="container__boton">Calcular</button>
+        <!-- Validación para la IP: formato correcto de 4 octetos (0-255) -->
+        <input type="text" class="container__input" id="valorIpRed" aria-label="Ingrese la IP" 
+               placeholder="e.x., 192.168.0.254" 
+               pattern="^((25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$" 
+               required/>
 
+        <h2 id="numeroMascara">Ingrese el número de máscara</h2>
+        <!-- Validación para el número de máscara: valor entre 1 y 32 -->
+        <input class="container__input" type="number" id="valorNoCeros" min="1" max="32" 
+               label="Ingrese el número de máscara" 
+               placeholder="1 a 32" required/>
+
+        <h2 id="ipCalcular">Ingrese el número deseado</h2>
+        <!-- Validación para el número deseado: valor positivo entero -->
+        <input type="number" class="container__input" id="valorIpDeseado" 
+               label="Ingrese el número deseado" 
+               placeholder="Ingrese un valor entero positivo" min="0" required/>
+
+        <button onclick="calcularIp()" class="container__boton">Calcular</button>
     </div>
-    
-  
     
     <div class="container2">
         <h2>Su número de host es</h2>
@@ -29,6 +36,8 @@
 
         <h3>IP Binaria</h3>
         <h3 id="IpBinaria"></h3>
+        <h3 id="binarioRed"></h3>
+        <h3 id="binarioHosts"></h3>
 
         <h3>IP Máscara</h3>
         <h3 id="ipMascaraText"></h3>
@@ -44,10 +53,15 @@
 
         <h3>Clase</h3>
         <h3 id="tipoClaseIp"></h3>
-        
+
         <h3>Deseado</h3>
         <h3 id="valorIpSumaTexto"></h3>
+    
+        <h3>Es privada o pública</h3>
+        <h4 id="ipPrivadaOPublica"></h4>
     </div>
+
+    <div class="ipUtilesRango" id="rangoIpUtiles"></div>
 
     <script src="calculadora.js"></script>
 </body>
